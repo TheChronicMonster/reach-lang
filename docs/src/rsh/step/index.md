@@ -428,6 +428,21 @@ An @{defn("exit statement")}, written `{!rsh} exit();`, halts the computation.
 It is a terminator statement, so it must have an empty tail.
 It may only occur in a step.
 
+``` reach
+'reach 0.1';
+'use strict';
+
+export const main = Reach.App(() => {
+
+// rest of program
+
+  const leftovers = howMany;
+  transfer(leftovers * price).to(D); // consensus step
+  commit();                          // step
+  exit();                            // exits and destroys the contract
+});
+```
+
 ## {#ref-programs-step-exprs} Expressions
 
 Any expressions valid for a [computation](##ref-programs-compute-exprs) are valid for a step.
